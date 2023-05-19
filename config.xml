@@ -62,17 +62,19 @@
     </remote_servers>
 
     <zookeeper>
-        <node index="1">
-            <host>zookeeper</host>
-            <port>2181</port>
+        <node>
+            <host>keeper-server1.localdomain</host>
+            <port>9181</port>
+        </node>
+        <node>
+            <host>keeper-server2.localdomain</host>
+            <port>9181</port>
+        </node>
+        <node>
+            <host>keeper-server3.localdomain</host>
+            <port>9181</port>
         </node>
     </zookeeper>
-
-    <macros>
-        <cluster>test_cluster</cluster>
-        <shard>02</shard>
-        <replica>clickhouse04</replica>
-    </macros>
 
     <distributed_ddl>
         <path>/clickhouse/task_queue/ddl</path>
